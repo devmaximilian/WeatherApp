@@ -18,7 +18,7 @@ struct WeatherView: View {
                 Image(systemName: model.symbol)
                     .font(
                         .system(
-                            size: 36,
+                            size: 40,
                             weight: .bold,
                             design: .serif
                         )
@@ -26,13 +26,16 @@ struct WeatherView: View {
                 Text("\(model.temperature) °C")
                     .font(
                         .system(
-                            size: 36,
+                            size: 40,
                             weight: .bold,
                             design: .serif
                         )
                     )
                 
             }
+            #if os(iOS)
+            Spacer()
+            #endif
             HStack(spacing: 4) {
                 Text("Source:")
                 Link("SMHI", destination: sourceURL)
