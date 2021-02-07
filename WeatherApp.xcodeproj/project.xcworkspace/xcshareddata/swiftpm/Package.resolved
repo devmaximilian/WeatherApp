@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Weather",
+        "repositoryURL": "git@github.com:devmaximilian/Weather.git",
+        "state": {
+          "branch": null,
+          "revision": "a50f0ff5068af5a33d2afc21b5d891279da896ca",
+          "version": "1.0.0-rc.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
