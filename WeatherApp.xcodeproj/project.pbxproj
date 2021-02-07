@@ -54,6 +54,7 @@
 		0413E7CA25D06D4C0045C485 = {
 			isa = PBXGroup;
 			children = (
+				0413E84425D081BA0045C485 /* Resources */,
 				0413E7CF25D06D4C0045C485 /* Shared */,
 				0413E7D925D06D4D0045C485 /* iOS */,
 				0413E7E025D06D4D0045C485 /* macOS */,
@@ -104,6 +105,13 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0413E84425D081BA0045C485 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
