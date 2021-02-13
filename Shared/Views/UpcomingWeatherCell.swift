@@ -26,7 +26,7 @@ struct UpcomingWeatherCell: View {
                     Image(systemName: "chevron.right")
                 }
                 .overlay(NavigationLink(
-                    destination:  ForecastDetail(forecast: forecast),
+                    destination:  WeatherDetail(forecast: forecast),
                     isActive: $isShowingDetailView,
                     label: { EmptyView() }
                 ).hidden())
@@ -41,7 +41,7 @@ struct UpcomingWeatherCell: View {
 }
 
 #if DEBUG
-struct FutureForecast_Previews: PreviewProvider {
+struct UpcomingWeatherCell_Previews: PreviewProvider {
     static var previews: some View {
         UpcomingWeatherCell(forecast: .example)
     }

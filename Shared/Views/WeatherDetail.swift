@@ -1,5 +1,5 @@
 //
-//  WeatherDetails.swift
+//  WeatherDetail.swift
 //  WeatherApp
 //
 //  Created by Maximilian Wendel on 2021-02-12.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Weather
 
-struct WeatherDetails: View {
+struct WeatherDetail: View {
     var forecast: Forecast
     
     var body: some View {
@@ -22,9 +22,9 @@ struct WeatherDetails: View {
 }
 
 #if DEBUG
-struct ForecastDetail_Previews: PreviewProvider {
+struct WeatherDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherDetails(forecast: .example)
+        WeatherDetail(forecast: .example)
     }
 }
 #endif

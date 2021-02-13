@@ -39,8 +39,10 @@ struct CurrentWeather: View {
     }
 }
 
-struct ForecastView_Previews: PreviewProvider {
+#if DEBUG
+struct CurrentWeather_Previews: PreviewProvider {
     static var previews: some View {
         CurrentWeather(forecast: .example)
     }
 }
+#endif
