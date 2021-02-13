@@ -10,7 +10,7 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject var model: WeatherModel
 
-    @Preference(key: "dismissedLocationAuthorization_")
+    @Preference(key: "dismissedLocationAuthorization")
     var dismissedLocationAuthorization: Bool
     
     var body: some View {

@@ -46,7 +46,7 @@ final class WeatherModel: ObservableObject {
                 case .notDetermined:
                     self.shouldRequestAuthorization = true
                 default:
-                    self.shouldRequestAuthorization = false
+                    self.requestAuthorization()
                 }
             })
         self.cancellables["weather"] = locationManager.location
