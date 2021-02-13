@@ -94,7 +94,6 @@
 				040CCC4C25D171D1002EC892 /* Views */,
 				0413E7D025D06D4C0045C485 /* WeatherApp.swift */,
 				0413E7D225D06D4D0045C485 /* Assets.xcassets */,
-				0413E81125D06D700045C485 /* WeatherModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -142,6 +141,7 @@
 		046BED4D25D2B9DF008C53F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0413E81125D06D700045C485 /* WeatherModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
