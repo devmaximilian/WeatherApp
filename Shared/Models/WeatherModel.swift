@@ -118,9 +118,6 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     private func configure() {
-        // Configure location manager
-        self.locationManager.requestLocation()
-        
         // Configure placemark subscription
         self.cancellables["placemark"] = self.location
             .flatMap { location in
@@ -147,6 +144,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func requestAuthorization() {
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
 }
 
