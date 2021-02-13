@@ -31,8 +31,7 @@ struct UpcomingWeatherCell: View {
                     label: { EmptyView() }
                 ).hidden())
             }
-            .padding(.vertical, 10)
-            .padding(.horizontal, 15)
+            .padding(10)
         }
         .onTapGesture {
             isShowingDetailView = true
