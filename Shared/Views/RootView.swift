@@ -9,13 +9,21 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject var model: WeatherModel
-    
-    private let sourceURL = URL(string: "https://smhi.se")!
+
+    @Preference(key: "dismissedLocationAuthorization_")
+    var dismissedLocationAuthorization: Bool
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 15) {
+                    // Location authorization prompt
+                    if model.shouldRequestAuthorization && dismissedLocationAuthorization == false {
+                        LocationAuthorizationInformation(perform: model.requestAuthorization) {
+                            dismissedLocationAuthorization = true
+                        }
+                    }
+                    
                     // Current weather
                     CurrentWeather(forecast: model.forecast, placemark: model.placemark)
                     
@@ -23,25 +31,20 @@ struct RootView: View {
                     ForEach(model.upcoming) { forecast in
                         UpcomingWeatherCell(forecast: forecast)
                     }
-                    HStack(spacing: 4) {
-                        Spacer()
-                        Text("Source:")
-                        Link("SMHI", destination: sourceURL)
-                        Spacer()
-                    }
+                    
+                    // Attribution
+                    SourceAttribution()
                 }
                 .padding(15)
                 .navigationTitle(model.forecast?.date ?? "")
             }
             .frame(minWidth: 300)
+            
             // Detail view
             VStack {
                 Text("Detail view")
             }
         }
-        .onAppear(
-            perform: model.update
-        )
     }
 }
 
