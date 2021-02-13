@@ -89,12 +89,12 @@
 		0413E7CF25D06D4C0045C485 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				04B7786C25D7CBA9001A1194 /* Utility */,
 				046BED4D25D2B9DF008C53F3 /* Models */,
 				040CCC4C25D171D1002EC892 /* Views */,
 				0413E7D025D06D4C0045C485 /* WeatherApp.swift */,
 				0413E7D225D06D4D0045C485 /* Assets.xcassets */,
 				0413E81125D06D700045C485 /* WeatherModel.swift */,
-				0460090025D6D87B00164CE0 /* Weather+Extensions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -144,6 +144,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		04B7786C25D7CBA9001A1194 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0460090025D6D87B00164CE0 /* Weather+Extensions.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
