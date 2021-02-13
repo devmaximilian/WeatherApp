@@ -52,10 +52,7 @@ extension Forecast {
         return numberFormatter.string(from: number) ?? "-/-"
     }
     public var time: String {
-        guard day == dateFormatter.string(from: .init(), format: "dd") else {
-            return date
-        }
-        return dateFormatter.string(from: validTime, format: "HH")
+        return date
     }
     public var date: String {
         return relativeDateFormatter.string(from: validTime)
