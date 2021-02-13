@@ -431,7 +431,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = se.devmaximilian.WeatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
 				PRODUCT_NAME = WeatherApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -455,7 +455,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = se.devmaximilian.WeatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
 				PRODUCT_NAME = WeatherApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -483,7 +483,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.devmaximilian.WeatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
 				PRODUCT_NAME = WeatherApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -509,7 +509,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = se.devmaximilian.WeatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
 				PRODUCT_NAME = WeatherApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
