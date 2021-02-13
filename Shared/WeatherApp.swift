@@ -13,7 +13,7 @@ struct WeatherApp: App {
     
     var body: some Scene {
         WindowGroup {
-            WeatherView()
+            RootView()
                 .environmentObject(model)
         }
     }

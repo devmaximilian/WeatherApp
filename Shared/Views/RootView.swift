@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WeatherView: View {
+struct RootView: View {
     @EnvironmentObject var model: WeatherModel
     
     private let sourceURL = URL(string: "https://smhi.se")!
@@ -47,7 +47,7 @@ struct WeatherView: View {
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView()
+        RootView()
             .environmentObject(WeatherModel())
     }
 }
