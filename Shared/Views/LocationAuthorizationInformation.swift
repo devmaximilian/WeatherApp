@@ -48,8 +48,8 @@ struct AuthorizationButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(Font.callout.weight(.medium))
-            .padding(.vertical, 5)
-            .padding(.horizontal, 15)
+            .padding(.vertical, 10)
+            .padding(.horizontal, 20)
             .background(configuration.isPressed ? Color.blue.opacity(0.85) : Color.blue)
             .cornerRadius(8)
             .foregroundColor(.white)
