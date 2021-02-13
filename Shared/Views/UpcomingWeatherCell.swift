@@ -8,7 +8,7 @@
 import SwiftUI
 import Weather
 
-struct FutureForecast: View {
+struct UpcomingWeatherCell: View {
     var forecast: Forecast
     @State private var isShowingDetailView: Bool = false
     
@@ -43,7 +43,7 @@ struct FutureForecast: View {
 #if DEBUG
 struct FutureForecast_Previews: PreviewProvider {
     static var previews: some View {
-        FutureForecast(forecast: .example)
+        UpcomingWeatherCell(forecast: .example)
     }
 }
 #endif

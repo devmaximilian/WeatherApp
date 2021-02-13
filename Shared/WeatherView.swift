@@ -17,11 +17,11 @@ struct WeatherView: View {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 15) {
                     // Current weather
-                    ForecastView(forecast: model.forecast, placemark: model.placemark)
+                    CurrentWeather(forecast: model.forecast, placemark: model.placemark)
                     
                     // List of upcoming weather
                     ForEach(model.upcoming) { forecast in
-                        FutureForecast(forecast: forecast)
+                        UpcomingWeatherCell(forecast: forecast)
                     }
                     HStack(spacing: 4) {
                         Spacer()

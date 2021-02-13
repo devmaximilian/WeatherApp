@@ -9,7 +9,7 @@ import SwiftUI
 import Weather
 import CoreLocation
 
-struct ForecastView: View {
+struct CurrentWeather: View {
     var forecast: Forecast?
     var placemark: CLPlacemark?
     
@@ -41,6 +41,6 @@ struct ForecastView: View {
 
 struct ForecastView_Previews: PreviewProvider {
     static var previews: some View {
-        ForecastView(forecast: .example)
+        CurrentWeather(forecast: .example)
     }
 }
