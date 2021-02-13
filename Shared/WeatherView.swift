@@ -13,40 +13,32 @@ struct WeatherView: View {
     private let sourceURL = URL(string: "https://smhi.se")!
     
     var body: some View {
-        VStack {
-            HStack(spacing: 20) {
-                Image(systemName: model.symbol)
-                    .font(
-                        .system(
-                            size: 40,
-                            weight: .bold,
-                            design: .serif
-                        )
-                    )
-                Text("\(model.temperature) °C")
-                    .font(
-                        .system(
-                            size: 40,
-                            weight: .bold,
-                            design: .serif
-                        )
-                    )
-                
+        NavigationView {
+            ScrollView(.vertical) {
+                VStack(alignment: .leading, spacing: 15) {
+                    // Current weather
+                    ForecastView(forecast: model.forecast, placemark: model.placemark)
+                    
+                    // List of upcoming weather
+                    ForEach(model.upcoming) { forecast in
+                        FutureForecast(forecast: forecast)
+                    }
+                    HStack(spacing: 4) {
+                        Spacer()
+                        Text("Source:")
+                        Link("SMHI", destination: sourceURL)
+                        Spacer()
+                    }
+                }
+                .padding(15)
+                .navigationTitle(model.forecast?.date ?? "")
             }
-            #if os(iOS)
-            Spacer()
-            #endif
-            HStack(spacing: 4) {
-                Text("Source:")
-                Link("SMHI", destination: sourceURL)
+            .frame(minWidth: 300)
+            // Detail view
+            VStack {
+                Text("Detail view")
             }
         }
-        .frame(
-            width: 350,
-            height: 150,
-            alignment: .center
-        )
-        .padding(10)
         .onAppear(
             perform: model.update
         )
@@ -56,5 +48,6 @@ struct WeatherView: View {
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherView()
+            .environmentObject(WeatherModel())
     }
 }

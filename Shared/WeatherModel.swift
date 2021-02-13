@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Weather
+import CoreLocation
 
 final class WeatherModel: ObservableObject {
     private var cancellables: [String: AnyCancellable] = [:]
@@ -16,25 +17,60 @@ final class WeatherModel: ObservableObject {
             guard let weather = weather else {
                 return
             }
-            temperature = Int(weather.get(\.values, for: .t).first ?? 0)
-            symbol = String(weatherSymbol: Int(weather.get(\.values, for: .wsymb2).first ?? 0))
+            self.forecast = weather.unsafeForecast
+            self.upcoming = weather.forecasts.filter { $0.validTime != self.forecast?.validTime }
         }
     }
-    
-    @Published var temperature: Int = 0
-    @Published var symbol: String = ""
+    @Published var loading: Bool = true
+    @Published var forecast: Forecast?
+    @Published var upcoming: [Forecast] = []
+    @Published var placemark: CLPlacemark? = nil
     
     init() {}
     
+    private func getLocation() -> AnyPublisher<(latitude: Double, longitude: Double), Error> {
+        return Just((latitude: 59.3258414, longitude: 17.7018733))
+            .tryMap { $0 }
+            .eraseToAnyPublisher()
+    }
+    
     func update() {
-        self.cancellables["weather"] = Weather.publisher(latitude: 59.3258414, longitude: 17.7018733)
+        self.cancellables["weather"] = getLocation()
+            .flatMap { coordinate in
+                return Weather.publisher(
+                    latitude: coordinate.latitude,
+                    longitude: coordinate.longitude
+                )
+            }
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
-                print(completion)
+                // TODO: Add proper error handling
             }, receiveValue: { [weak self] weather in
                 guard let self = self else { return }
                 self.weather = weather
+                self.loading = false
             })
+        self.cancellables["location"] = getLocation()
+            .flatMap { coordinate in
+                return Future<CLPlacemark, Error> { completion in
+                    let geocoder = CLGeocoder()
+                    let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+                    geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+                        guard let placemark = placemarks?.first else {
+                            return completion(.failure(URLError(.unknown)))
+                        }
+                        completion(.success(placemark))
+                    }
+                }
+            }
+            .sink(receiveCompletion: { _ in
+                // TODO: Add proper error handling
+            }, receiveValue: { [weak self] placemark in
+                guard let self = self else { return }
+                
+                self.placemark = placemark
+            })
+        
     }
 }
 
