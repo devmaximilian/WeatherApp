@@ -12,6 +12,11 @@ import CoreLocation
 struct CurrentWeather: View {
     var forecast: Forecast?
     var placemark: CLPlacemark?
+    #if os(iOS)
+    var padding: CGFloat = 50
+    #else
+    var padding: CGFloat = 30
+    #endif
     
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
@@ -35,7 +40,7 @@ struct CurrentWeather: View {
             Text(placemark?.locality ?? "–")
                 .font(.title2)
         }
-        .padding(.vertical, 30)
+        .padding(.vertical, padding)
     }
 }
 
