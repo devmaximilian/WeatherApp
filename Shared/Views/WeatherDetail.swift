@@ -54,7 +54,7 @@ struct ParameterCell: View {
                         Text("\(value) of \(max)")
                             .font(.body)
                     case .percent(let value):
-                        Text("\(Int(value))%")
+                        Text("\(Int(value*100))%")
                             .font(.body)
                     case .text(let text):
                         Text(text)
