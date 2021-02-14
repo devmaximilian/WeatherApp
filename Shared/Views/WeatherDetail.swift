@@ -14,10 +14,7 @@ struct WeatherDetail: View {
         GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading),
         GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading)
     ]
-    var parameters: [Parameter.Name] = [
-        .t,
-        .pcat
-    ]
+    var parameters: [Parameter.Name] = Parameter.Name.allCases
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
