@@ -8,9 +8,28 @@
 import SwiftUI
 import Weather
 
+#if os(watchOS)
+typealias GroupBox = Group
+#endif
+
 struct UpcomingWeatherCell: View {
     var forecast: Forecast
     @State private var isShowingDetailView: Bool = false
+    
+    var scale: CGFloat = {
+        #if os(watchOS)
+        return 0.8
+        #else
+        return 1.0
+        #endif
+    }()
+    var padding: CGFloat = {
+        #if os(watchOS)
+        return 0
+        #else
+        return 8
+        #endif
+    }()
     
     var body: some View {
         GroupBox {
@@ -19,10 +38,14 @@ struct UpcomingWeatherCell: View {
                     Text(forecast.date)
                         .font(.headline)
                     Spacer()
+                    #if !os(watchOS)
                     Image(systemName: forecast.symbolName)
                         .font(.title)
+                        .scaleEffect(scale)
+                    #endif
                     Text(forecast.value(for: .t) + "°")
                         .font(.title2)
+                        .scaleEffect(scale)
                     Image(systemName: "chevron.right")
                 }
                 .overlay(NavigationLink(
@@ -31,8 +54,9 @@ struct UpcomingWeatherCell: View {
                     label: { EmptyView() }
                 ).hidden())
             }
-            .padding(8)
+            .padding(padding)
         }
+        .scaleEffect(scale)
         .onTapGesture {
             isShowingDetailView = true
         }

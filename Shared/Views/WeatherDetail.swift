@@ -9,20 +9,23 @@ import SwiftUI
 import Weather
 
 struct WeatherDetail: View {
+    private var columns: [GridItem] = {
+        #if os(iOS) || os(watchOS)
+        return [
+            GridItem(.adaptive(minimum: 250), spacing: nil, alignment: .leading)
+        ]
+        #else
+        return [
+            GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading),
+            GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading)
+        ]
+        #endif
+    }()
     var forecast: Forecast
-    #if os(iOS)
-    var columns: [GridItem] = [
-        GridItem(.adaptive(minimum: 250), spacing: nil, alignment: .leading)
-    ]
-    #else
-    var columns: [GridItem] = [
-        GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading),
-        GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading)
-    ]
-    #endif
-    var parameters: [Parameter.Name] = [
-        .t, .msl, .vis, .ws, .wd, .r, .tstm, .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean, .gust, .pmin, .pmax, .pmean, .pmedian, .spp, .pcat
-    ]
+    
+    init(forecast: Forecast) {
+        self.forecast = forecast
+    }
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -68,7 +71,7 @@ struct WeatherDetail: View {
                                 }
                                 Spacer()
                             }
-                            if forecast.get(.tcc_mean, \.value) > 0 {
+                            if forecast.get(.mcc_mean, \.value) > 0 {
                                 VStack(alignment: .leading) {
                                     Text("Medium level")
                                         .font(.subheadline)
@@ -76,7 +79,7 @@ struct WeatherDetail: View {
                                 }
                                 Spacer()
                             }
-                            if forecast.get(.tcc_mean, \.value) > 0 {
+                            if forecast.get(.hcc_mean, \.value) > 0 {
                                 VStack(alignment: .leading) {
                                     Text("High level")
                                         .font(.subheadline)

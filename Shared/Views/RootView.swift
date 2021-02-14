@@ -14,10 +14,21 @@ struct RootView: View {
     @Preference(key: "dismissedLocationAuthorization")
     private var dismissedLocationAuthorization: Bool
     
+    #if os(iOS)
+    let minWidth: CGFloat = 250
+    let spacing: CGFloat = 15
+    #elseif os(watchOS)
+    let minWidth: CGFloat = 200
+    let spacing: CGFloat = 0
+    #else
+    let minWidth: CGFloat = 350
+    let spacing: CGFloat = 15
+    #endif
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
-                VStack(alignment: .leading, spacing: 15) {
+                VStack(alignment: .leading, spacing: spacing) {
                     if model.shouldRequestAuthorization {
                         LocationAuthorizationInformation {
                             model.requestAuthorization()
@@ -57,10 +68,10 @@ struct RootView: View {
                     // Attribution
                     SourceAttribution()
                 }
-                .padding(15)
+                .padding(spacing)
                 .navigationTitle(model.forecast?.date ?? "")
             }
-            .frame(minWidth: 300)
+            .frame(minWidth: minWidth)
             
             if let forecast = model.forecast {
                 WeatherDetail(forecast: forecast)

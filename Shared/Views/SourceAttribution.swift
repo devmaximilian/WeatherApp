@@ -10,11 +10,26 @@ import SwiftUI
 struct SourceAttribution: View {
     private let sourceURL = URL(string: "https://smhi.se")!
     
+    #if os(watchOS)
+    typealias Stack = VStack
+    #else
+    typealias Stack = HStack
+    #endif
+    
+    var scale: CGFloat = {
+        #if os(watchOS)
+        return 0.8
+        #else
+        return 1.0
+        #endif
+    }()
+    
     var body: some View {
-        HStack(spacing: 4) {
+        Stack(spacing: 4) {
             Spacer()
-            Text("Source:")
+            Text("Source")
             Link("SMHI", destination: sourceURL)
+                .scaleEffect(scale)
             Spacer()
         }
     }

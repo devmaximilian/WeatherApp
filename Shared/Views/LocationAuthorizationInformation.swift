@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+#if os(watchOS)
+typealias BorderlessButtonStyle = PlainButtonStyle
+#endif
+
 struct LocationAuthorizationInformation: View {
     private var action: (() -> Void)?
     private var dismissAction: (() -> Void)?
@@ -46,13 +50,19 @@ struct LocationAuthorizationInformation: View {
 
 struct AuthorizationButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
+        let label = configuration.label
             .font(Font.callout.weight(.medium))
             .padding(.vertical, 10)
             .padding(.horizontal, 20)
             .background(configuration.isPressed ? Color.blue.opacity(0.85) : Color.blue)
             .cornerRadius(8)
             .foregroundColor(.white)
+        #if os(watchOS)
+        return label
+            .scaleEffect(0.8)
+        #else
+        return label
+        #endif
     }
 }
 

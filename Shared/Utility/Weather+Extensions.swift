@@ -33,7 +33,11 @@ fileprivate let dateFormatter: DateFormatter = {
 fileprivate let relativeDateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
+    #if os(watchOS)
+    formatter.dateStyle = .short
+    #else
     formatter.dateStyle = .medium
+    #endif
     formatter.doesRelativeDateFormatting = true
     formatter.locale = .current
     formatter.timeZone = TimeZone(secondsFromGMT: 0)
