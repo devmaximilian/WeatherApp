@@ -12,12 +12,12 @@ struct WeatherDetail: View {
     var forecast: Forecast
     
     var body: some View {
-        VStack {
-            
+        ScrollView(.vertical, showsIndicators: true) {
+            VStack {
+                Text("\(forecast.date) – Hello, World!")
+            }
         }
         .navigationTitle(forecast.date)
-        Text("\(forecast.date) – Hello, World!")
-        
     }
 }
 

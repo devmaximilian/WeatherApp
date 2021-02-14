@@ -42,9 +42,8 @@ struct RootView: View {
             }
             .frame(minWidth: 300)
             
-            // Detail view
-            VStack {
-                Text("Detail view")
+            if let forecast = model.forecast {
+                WeatherDetail(forecast: forecast)
             }
         }
     }
