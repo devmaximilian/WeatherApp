@@ -20,10 +20,64 @@ struct WeatherDetail: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
+                
                 LazyVGrid(columns: columns) {
-                    ForEach(parameters) { parameter in
-                        ParameterCell(parameter: forecast.get(parameter))
+                    ParameterSection(label: "Temperature") {
+                        Text("\(forecast.get(.t, \.displayValue))°")
+                    }
+                    ParameterSection(label: "Relative humidity") {
+                        Text("\(Int(forecast.get(.r, \.value)))%")
+                    }
+                    ParameterSection(label: "Wind") {
+                        Text("\(forecast.get(.ws, \.displayValue)) \(forecast.get(.ws, \.displayUnit)) (\(forecast.get(.gust, \.displayValue)) \(forecast.get(.gust, \.displayUnit))), \(forecast.get(.wd).direction)")
+                    }
+                    ParameterSection(label: "Pressure") {
+                        Text("\(Int(forecast.get(.msl, \.value))) \(forecast.get(.msl, \.displayUnit))")
+                    }
+                    ParameterSection(label: "Precipitation") {
+                        HStack {
+                            if forecast.get(.pmin, \.value) > 0 {
+                                Image(systemName: forecast.get(.pcat).category)
+                                    .font(.title3)
+                                Text("\(forecast.get(.pmin, \.displayValue)) – \(forecast.get(.pmax, \.displayValue)) \(forecast.get(.pmean, \.displayUnit))")
+                            } else {
+                                Text("–")
+                            }
+                        }
+                    }
+                    ParameterSection(label: "Visibility") {
+                        Text("\(forecast.get(.vis, \.displayValue)) \(forecast.get(.vis, \.displayUnit))")
+                    }
+                    ParameterSection(label: "Thunder probability") {
+                        forecast.get(.tstm, \.value) > 0 ? Text("\(Int(forecast.get(.tstm, \.value)))%") : Text("–")
+                    }
+                    ParameterSection(label: "Cloud coverage") {
+                        HStack {
+                            if forecast.get(.lcc_mean, \.value) > 0 {
+                                VStack(alignment: .leading) {
+                                    Text("Low level")
+                                        .font(.subheadline)
+                                    Text("\(forecast.get(.lcc_mean, \.displayValue)) \(forecast.get(.lcc_mean, \.displayUnit))")
+                                }
+                                Spacer()
+                            }
+                            if forecast.get(.tcc_mean, \.value) > 0 {
+                                VStack(alignment: .leading) {
+                                    Text("Medium level")
+                                        .font(.subheadline)
+                                    Text("\(forecast.get(.mcc_mean, \.displayValue)) \(forecast.get(.mcc_mean, \.displayUnit))")
+                                }
+                                Spacer()
+                            }
+                            if forecast.get(.tcc_mean, \.value) > 0 {
+                                VStack(alignment: .leading) {
+                                    Text("High level")
+                                        .font(.subheadline)
+                                    Text("\(forecast.get(.hcc_mean, \.displayValue)) \(forecast.get(.hcc_mean, \.displayUnit))")
+                                }
+                            }
+                        }
                     }
                 }
             }.padding()
@@ -32,37 +86,18 @@ struct WeatherDetail: View {
     }
 }
 
-struct ParameterCell: View {
-    var parameter: Parameter
+struct ParameterSection<Content>: View where Content: View {
+    var label: String
+    let viewBuilder: () -> Content
     
     var body: some View {
         GroupBox {
             HStack {
-                VStack(alignment: .leading) {
-                    Text(parameter.name.rawValue)
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(label)
                         .font(.headline)
-                    Spacer()
-                        .frame(height: 5)
-                    switch parameter.presentation {
-                    case .symbol(let name):
-                        Image(systemName: name)
-                            .font(.title3)
-                    case .unit(let unit, let value):
-                        Text("\(value) \(unit)")
-                            .font(.body)
-                    case .scale(let value, let min, let max):
-                        Text("\(value) of \(max)")
-                            .font(.body)
-                    case .percent(let value):
-                        Text("\(Int(value*100))%")
-                            .font(.body)
-                    case .text(let text):
-                        Text(text)
-                            .font(.body)
-                    default:
-                        Text("\(parameter.value)")
-                            .font(.body)
-                    }
+                    viewBuilder()
+                    Spacer(minLength: 0)
                 }
                 Spacer()
             }

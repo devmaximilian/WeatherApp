@@ -99,16 +99,6 @@ extension Forecast: Identifiable {
 // MARK: - Parameter
 
 extension Parameter {
-    var presentation: ParameterPresentation {
-        switch name {
-        case .pcat: return .pcat(self)
-        case .r, .tstm, .spp: return .percent(value: max(value/100, 0))
-        case .msl, .t, .vis, .ws, .gust, .pmin, .pmax, .pmean, .pmedian: return .unit(displayUnit, value: displayValue)
-        case .wd: return .unit("", value: direction)
-        case .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean: return .scale(value: Int(value), min: 0, max: 8)
-        default: return .none
-        }
-    }
     // TODO: Localized label for parameter
     var displayName: String {
         return name.rawValue
@@ -123,7 +113,7 @@ extension Parameter {
     }
     
     // Convert degrees into direction
-    private var direction: String {
+    var direction: String {
         let directions = [
             "N",
             "NNE",
@@ -146,20 +136,9 @@ extension Parameter {
         let index = Int((value / 22.5))
         return directions[index]
     }
-}
-
-enum ParameterPresentation {
-    case symbol(String)
-    case scale(value: Int, min: Int, max: Int)
-    case percent(value: Double)
-    case unit(_ unit: String, value: String)
-    case text(String)
-    case none
-}
-
-extension ParameterPresentation {
-    static func pcat(_ parameter: Parameter) -> ParameterPresentation {
-        let value = Int(parameter.value)
+    
+    var category: String {
+        let value = Int(self.value)
         var symbol = ""
         
         switch value {
@@ -171,9 +150,17 @@ extension ParameterPresentation {
         case 6: symbol = "cloud.hail"
         default: symbol = "sparkles"
         }
-        
-        return .symbol(symbol)
+        return symbol
     }
+}
+
+enum ParameterPresentation {
+    case symbol(String)
+    case scale(value: Int, min: Int, max: Int)
+    case percent(value: Double)
+    case unit(_ unit: String, value: String)
+    case text(String)
+    case none
 }
 
 extension Parameter.Name: Identifiable {
