@@ -14,7 +14,9 @@ struct WeatherDetail: View {
         GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading),
         GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading)
     ]
-    var parameters: [Parameter.Name] = Parameter.Name.allCases
+    var parameters: [Parameter.Name] = [
+        .t, .msl, .vis, .ws, .wd, .r, .tstm, .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean, .gust, .pmin, .pmax, .pmean, .pmedian, .spp, .pcat
+    ]
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -49,7 +51,14 @@ struct ParameterCell: View {
                         Text("\(value) \(unit)")
                             .font(.body)
                     case .scale(let value, let min, let max):
-                        Text("\(value) – \(min)...\(max)")
+                        Text("\(value) of \(max)")
+                            .font(.body)
+                    case .percent(let value):
+                        Text("\(Int(value))%")
+                            .font(.body)
+                    case .text(let text):
+                        Text(text)
+                            .font(.body)
                     default:
                         Text("\(parameter.value)")
                             .font(.body)

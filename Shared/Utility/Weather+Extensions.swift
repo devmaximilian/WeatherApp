@@ -102,9 +102,10 @@ extension Parameter {
     var presentation: ParameterPresentation {
         switch name {
         case .pcat: return .pcat(self)
-        case .r, .tstm, .spp: return .scale(value: max(value, 0), min: 0, max: 100)
-        case .msl, .t, .vis, .wd, .ws, .gust, .pmin, .pmax, .pmean, .pmedian: return .unit(displayUnit, value: displayValue)
-        case .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean: return .scale(value: value, min: 0, max: 8)
+        case .r, .tstm, .spp: return .percent(value: max(value/100, 0))
+        case .msl, .t, .vis, .ws, .gust, .pmin, .pmax, .pmean, .pmedian: return .unit(displayUnit, value: displayValue)
+        case .wd: return .unit("", value: direction)
+        case .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean: return .scale(value: Int(value), min: 0, max: 8)
         default: return .none
         }
     }
@@ -120,12 +121,39 @@ extension Parameter {
     var displayValue: String {
         return numberFormatter.string(from: NSNumber(value: value)) ?? "-/-"
     }
+    
+    // Convert degrees into direction
+    private var direction: String {
+        let directions = [
+            "N",
+            "NNE",
+            "NE",
+            "ENE",
+            "E",
+            "ESE",
+            "SE",
+            "SSE",
+            "S",
+            "SSW",
+            "SW",
+            "WSW",
+            "W",
+            "WNW",
+            "NW",
+            "NNW",
+            "N"
+        ]
+        let index = Int((value / 22.5))
+        return directions[index]
+    }
 }
 
 enum ParameterPresentation {
     case symbol(String)
-    case scale(value: Double, min: Double, max: Double)
+    case scale(value: Int, min: Int, max: Int)
+    case percent(value: Double)
     case unit(_ unit: String, value: String)
+    case text(String)
     case none
 }
 
