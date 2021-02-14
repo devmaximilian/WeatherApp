@@ -36,6 +36,7 @@ fileprivate let relativeDateFormatter: DateFormatter = {
     formatter.dateStyle = .medium
     formatter.doesRelativeDateFormatting = true
     formatter.locale = .current
+    formatter.timeZone = TimeZone(secondsFromGMT: 0)
     return formatter
 }()
 
