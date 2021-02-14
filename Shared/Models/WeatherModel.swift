@@ -46,6 +46,7 @@ final class WeatherModel: ObservableObject {
                 case .notDetermined:
                     self.shouldRequestAuthorization = true
                 default:
+                    self.shouldRequestAuthorization = false
                     self.requestAuthorization()
                 }
             })
@@ -158,6 +159,7 @@ extension LocationManager {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         self.location.send(location)
+        self.authorizationStatus.send(manager.authorizationStatus)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -166,5 +168,6 @@ extension LocationManager {
     
     func locationManager(_ manager: CLLocationManager, didUpdateTo newLocation: CLLocation, from oldLocation: CLLocation) {
         self.location.send(newLocation)
+        self.authorizationStatus.send(manager.authorizationStatus)
     }
 }

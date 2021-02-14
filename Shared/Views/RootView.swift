@@ -17,9 +17,11 @@ struct RootView: View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 15) {
-                    // Location authorization prompt
-                    if model.shouldRequestAuthorization && dismissedLocationAuthorization == false {
-                        LocationAuthorizationInformation(perform: model.requestAuthorization) {
+                    if model.shouldRequestAuthorization {
+                        LocationAuthorizationInformation {
+                            model.requestAuthorization()
+                            dismissedLocationAuthorization = true
+                        } dismiss: {
                             dismissedLocationAuthorization = true
                         }
                     }
