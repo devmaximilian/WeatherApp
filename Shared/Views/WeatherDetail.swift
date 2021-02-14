@@ -10,10 +10,16 @@ import Weather
 
 struct WeatherDetail: View {
     var forecast: Forecast
+    #if os(iOS)
+    var columns: [GridItem] = [
+        GridItem(.adaptive(minimum: 250), spacing: nil, alignment: .leading)
+    ]
+    #else
     var columns: [GridItem] = [
         GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading),
         GridItem(.adaptive(minimum: 150), spacing: nil, alignment: .leading)
     ]
+    #endif
     var parameters: [Parameter.Name] = [
         .t, .msl, .vis, .ws, .wd, .r, .tstm, .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean, .gust, .pmin, .pmax, .pmean, .pmedian, .spp, .pcat
     ]
