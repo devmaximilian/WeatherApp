@@ -23,6 +23,7 @@
 		0424182B25D7E2B500F18081 /* SourceAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424182925D7E2B500F18081 /* SourceAttribution.swift */; };
 		0424183125D7E36100F18081 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424183025D7E36100F18081 /* Preference.swift */; };
 		0424183225D7E36100F18081 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424183025D7E36100F18081 /* Preference.swift */; };
+		0449150225D9D563006C3291 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0449150125D9D563006C3291 /* Preview Assets.xcassets */; };
 		0460090125D6D87B00164CE0 /* Weather+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090025D6D87B00164CE0 /* Weather+Extensions.swift */; };
 		0460090225D6D87B00164CE0 /* Weather+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090025D6D87B00164CE0 /* Weather+Extensions.swift */; };
 		0460090825D6F08A00164CE0 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090725D6F08A00164CE0 /* WeatherDetail.swift */; };
@@ -46,6 +47,9 @@
 		0424182425D7CEB100F18081 /* LocationAuthorizationInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAuthorizationInformation.swift; sourceTree = "<group>"; };
 		0424182925D7E2B500F18081 /* SourceAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAttribution.swift; sourceTree = "<group>"; };
 		0424183025D7E36100F18081 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		044914F825D9D562006C3291 /* WeatherApp (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0449150125D9D563006C3291 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0449150325D9D563006C3291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0460090025D6D87B00164CE0 /* Weather+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Extensions.swift"; sourceTree = "<group>"; };
 		0460090725D6F08A00164CE0 /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		04C4219525D6D41B006CB5DA /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
@@ -66,6 +70,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0413E82925D06E500045C485 /* Weather in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044914F525D9D562006C3291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +103,7 @@
 				0413E7CF25D06D4C0045C485 /* Shared */,
 				0413E7D925D06D4D0045C485 /* iOS */,
 				0413E7E025D06D4D0045C485 /* macOS */,
+				044914F925D9D562006C3291 /* tvOS */,
 				0413E7D825D06D4D0045C485 /* Products */,
 				0413E82725D06E500045C485 /* Frameworks */,
 			);
@@ -114,6 +126,7 @@
 			children = (
 				0413E7D725D06D4D0045C485 /* WeatherApp.app */,
 				0413E7DF25D06D4D0045C485 /* WeatherApp.app */,
+				044914F825D9D562006C3291 /* WeatherApp (tvOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +160,23 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		044914F925D9D562006C3291 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				0449150325D9D563006C3291 /* Info.plist */,
+				0449150025D9D563006C3291 /* Preview Content */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		0449150025D9D563006C3291 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0449150125D9D563006C3291 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		046BED4D25D2B9DF008C53F3 /* Models */ = {
@@ -209,6 +239,23 @@
 			productReference = 0413E7DF25D06D4D0045C485 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		044914F725D9D562006C3291 /* WeatherApp (tvOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0449150425D9D563006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp (tvOS)" */;
+			buildPhases = (
+				044914F425D9D562006C3291 /* Sources */,
+				044914F525D9D562006C3291 /* Frameworks */,
+				044914F625D9D562006C3291 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WeatherApp (tvOS)";
+			productName = "weather-app";
+			productReference = 044914F825D9D562006C3291 /* WeatherApp (tvOS).app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +269,9 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					0413E7DE25D06D4D0045C485 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					044914F725D9D562006C3291 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -244,6 +294,7 @@
 			targets = (
 				0413E7D625D06D4D0045C485 /* WeatherApp (iOS) */,
 				0413E7DE25D06D4D0045C485 /* WeatherApp (macOS) */,
+				044914F725D9D562006C3291 /* WeatherApp (tvOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +313,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0413E7FE25D06D4D0045C485 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044914F625D9D562006C3291 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0449150225D9D563006C3291 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +358,13 @@
 				0424182B25D7E2B500F18081 /* SourceAttribution.swift in Sources */,
 				0460090225D6D87B00164CE0 /* Weather+Extensions.swift in Sources */,
 				0413E7FA25D06D4D0045C485 /* WeatherApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		044914F425D9D562006C3291 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +587,53 @@
 			};
 			name = Release;
 		};
+		0449150525D9D563006C3291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"tvOS/Preview Content\"";
+				DEVELOPMENT_TEAM = PA5MWXMCUP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.3;
+			};
+			name = Debug;
+		};
+		0449150625D9D563006C3291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"tvOS/Preview Content\"";
+				DEVELOPMENT_TEAM = PA5MWXMCUP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.3;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +660,15 @@
 			buildConfigurations = (
 				0413E80525D06D4D0045C485 /* Debug */,
 				0413E80625D06D4D0045C485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0449150425D9D563006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp (tvOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0449150525D9D563006C3291 /* Debug */,
+				0449150625D9D563006C3291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
