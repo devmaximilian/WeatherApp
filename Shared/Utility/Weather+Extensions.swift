@@ -95,6 +95,59 @@ extension Forecast: Identifiable {
     }
 }
 
+
+// MARK: - Parameter
+
+extension Parameter {
+    var presentation: ParameterPresentation {
+        switch name {
+        case .pcat: return .pcat(self)
+        case .r, .tstm, .spp: return .scale(value: max(value, 0), min: 0, max: 100)
+        case .msl, .t, .vis, .wd, .ws, .gust, .pmin, .pmax, .pmean, .pmedian: return .unit(displayUnit, value: displayValue)
+        case .tcc_mean, .lcc_mean, .mcc_mean, .hcc_mean: return .scale(value: value, min: 0, max: 8)
+        default: return .none
+        }
+    }
+    // TODO: Localized label for parameter
+    var displayName: String {
+        return name.rawValue
+    }
+    
+    var displayUnit: String {
+        return unit
+    }
+    
+    var displayValue: String {
+        return numberFormatter.string(from: NSNumber(value: value)) ?? "-/-"
+    }
+}
+
+enum ParameterPresentation {
+    case symbol(String)
+    case scale(value: Double, min: Double, max: Double)
+    case unit(_ unit: String, value: String)
+    case none
+}
+
+extension ParameterPresentation {
+    static func pcat(_ parameter: Parameter) -> ParameterPresentation {
+        let value = Int(parameter.value)
+        var symbol = ""
+        
+        switch value {
+        case 1: symbol = "cloud.snow.fill"
+        case 2: symbol = "cloud.sleet.fill"
+        case 3: symbol = "cloud.rain.fill"
+        case 4: symbol = "cloud.drizzle.fill"
+        case 5: symbol = "cloud.hail.fill"
+        case 6: symbol = "cloud.hail"
+        default: symbol = "sparkles"
+        }
+        
+        return .symbol(symbol)
+    }
+}
+
 extension Parameter.Name: Identifiable {
     public var id: String {
         return rawValue
