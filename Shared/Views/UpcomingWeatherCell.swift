@@ -16,7 +16,7 @@ struct UpcomingWeatherCell: View {
         GroupBox {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Text(forecast.time)
+                    Text(forecast.date)
                         .font(.headline)
                     Spacer()
                     Image(systemName: forecast.symbolName)

@@ -53,7 +53,7 @@ extension Forecast {
         return numberFormatter.string(from: number) ?? "-/-"
     }
     public var time: String {
-        return date
+        return dateFormatter.string(from: validTime, format: "HH")
     }
     public var date: String {
         return relativeDateFormatter.string(from: validTime)
@@ -62,13 +62,41 @@ extension Forecast {
     public var day: String {
         return dateFormatter.string(from: validTime, format: "dd")
     }
+    // TODO: Refactor symbol resolution
     public var symbolName: String {
-        return "cloud"
+        var name = ""
+        let time = Int(self.time) ?? 0
+        switch Int(get(.wsymb2, \.value)) {
+            case 1: name = time <= 17 && time >= 8 ? "sun.max.fill" : "moon.stars.fill"
+            case 2: name = time <= 17 && time >= 8 ? "sun.max" : "moon"
+            case 3: name = "cloud"
+            case 4: name = time <= 17 && time >= 8 ? "cloud.sun" : "cloud.moon"
+            case 5: name = "cloud.fill"
+            case 6: name = time <= 17 && time >= 8 ? "cloud.sun.fill" : "cloud.moon.fill"
+            case 7: name = "cloud.fog.fill"
+            case 11: name = "cloud.bolt.rain.fill"
+            case 8, 18: name = "cloud.drizzle.fill"
+            case 9, 19: name = "cloud.rain.fill"
+            case 10, 20: name = "cloud.heavyrain.fill"
+            case 21: name = "cloud.bolt"
+            case 12, 13, 22, 23: name = "cloud.sleet"
+            case 14, 24: name = "cloud.sleet.fill"
+            case 15, 16, 25, 26: name = "cloud.snow"
+            case 17, 27: name = "cloud.snow.fill"
+            default: name = "sparkles"
+        }
+        return name
     }
 }
 
 extension Forecast: Identifiable {
     public var id: String {
         return validTime.description
+    }
+}
+
+extension Parameter.Name: Identifiable {
+    public var id: String {
+        return rawValue
     }
 }
