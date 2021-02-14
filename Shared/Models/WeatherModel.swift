@@ -36,6 +36,8 @@ final class WeatherModel: ObservableObject {
         self.configure()
     }
     
+    // TODO: Method to update relevant forecasts and set new current
+    
     private func configure() {
         self.cancellables["authorization-status"] = locationManager.authorizationStatus
             .sink(receiveCompletion: { [weak self] completion in

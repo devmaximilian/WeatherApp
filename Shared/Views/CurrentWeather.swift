@@ -40,6 +40,7 @@ struct CurrentWeather: View {
             Text(placemark?.locality ?? "–")
                 .font(.title2)
         }
+        .contentShape(Rectangle())
         .padding(.vertical, padding)
     }
 }
