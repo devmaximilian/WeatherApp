@@ -23,26 +23,6 @@
 		0424182B25D7E2B500F18081 /* SourceAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424182925D7E2B500F18081 /* SourceAttribution.swift */; };
 		0424183125D7E36100F18081 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424183025D7E36100F18081 /* Preference.swift */; };
 		0424183225D7E36100F18081 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424183025D7E36100F18081 /* Preference.swift */; };
-		0449150225D9D563006C3291 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0449150125D9D563006C3291 /* Preview Assets.xcassets */; };
-		0449152525D9D6D6006C3291 /* WeatherApp watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0449152425D9D6D6006C3291 /* WeatherApp watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0449152A25D9D6D6006C3291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0449152925D9D6D6006C3291 /* Assets.xcassets */; };
-		0449153125D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0449153025D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0449153A25D9D6D6006C3291 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449153925D9D6D6006C3291 /* ComplicationController.swift */; };
-		0449153C25D9D6D6006C3291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0449153B25D9D6D6006C3291 /* Assets.xcassets */; };
-		0449153F25D9D6D6006C3291 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0449153E25D9D6D6006C3291 /* Preview Assets.xcassets */; };
-		0449155325D9D753006C3291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0449155225D9D753006C3291 /* Assets.xcassets */; };
-		0449155A25D9D952006C3291 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413E7D025D06D4C0045C485 /* WeatherApp.swift */; };
-		0449156125D9D96B006C3291 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413E81125D06D700045C485 /* WeatherModel.swift */; };
-		0449156225D9D96B006C3291 /* UpcomingWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4219E25D6D483006CB5DA /* UpcomingWeatherCell.swift */; };
-		0449156325D9D96B006C3291 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090725D6F08A00164CE0 /* WeatherDetail.swift */; };
-		0449156425D9D96B006C3291 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413E7D125D06D4C0045C485 /* RootView.swift */; };
-		0449156525D9D96B006C3291 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4219525D6D41B006CB5DA /* CurrentWeather.swift */; };
-		0449156625D9D96B006C3291 /* LocationAuthorizationInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424182425D7CEB100F18081 /* LocationAuthorizationInformation.swift */; };
-		0449156725D9D96B006C3291 /* Weather+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090025D6D87B00164CE0 /* Weather+Extensions.swift */; };
-		0449156825D9D96B006C3291 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424183025D7E36100F18081 /* Preference.swift */; };
-		0449156925D9D96B006C3291 /* SourceAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424182925D7E2B500F18081 /* SourceAttribution.swift */; };
-		0449158325D9D9AA006C3291 /* Weather in Frameworks */ = {isa = PBXBuildFile; productRef = 0449158225D9D9AA006C3291 /* Weather */; };
-		0449158B25D9D9BD006C3291 /* Weather in Frameworks */ = {isa = PBXBuildFile; productRef = 0449158A25D9D9BD006C3291 /* Weather */; };
 		0460090125D6D87B00164CE0 /* Weather+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090025D6D87B00164CE0 /* Weather+Extensions.swift */; };
 		0460090225D6D87B00164CE0 /* Weather+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090025D6D87B00164CE0 /* Weather+Extensions.swift */; };
 		0460090825D6F08A00164CE0 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460090725D6F08A00164CE0 /* WeatherDetail.swift */; };
@@ -52,48 +32,6 @@
 		04C4219F25D6D483006CB5DA /* UpcomingWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4219E25D6D483006CB5DA /* UpcomingWeatherCell.swift */; };
 		04C421A025D6D483006CB5DA /* UpcomingWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4219E25D6D483006CB5DA /* UpcomingWeatherCell.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0449152625D9D6D6006C3291 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0413E7CB25D06D4C0045C485 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0449152325D9D6D6006C3291;
-			remoteInfo = "watchOS WatchKit App";
-		};
-		0449153225D9D6D6006C3291 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0413E7CB25D06D4C0045C485 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0449152F25D9D6D6006C3291;
-			remoteInfo = "watchOS WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		0449154425D9D6D6006C3291 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				0449153125D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0449154825D9D6D6006C3291 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				0449152525D9D6D6006C3291 /* WeatherApp watchOS WatchKit App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0413E7D025D06D4C0045C485 /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
@@ -108,19 +46,6 @@
 		0424182425D7CEB100F18081 /* LocationAuthorizationInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAuthorizationInformation.swift; sourceTree = "<group>"; };
 		0424182925D7E2B500F18081 /* SourceAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAttribution.swift; sourceTree = "<group>"; };
 		0424183025D7E36100F18081 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
-		044914F825D9D562006C3291 /* WeatherApp (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0449150125D9D563006C3291 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0449150325D9D563006C3291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0449152125D9D6D6006C3291 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0449152425D9D6D6006C3291 /* WeatherApp watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0449152925D9D6D6006C3291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0449152B25D9D6D6006C3291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0449153025D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WeatherApp watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0449153925D9D6D6006C3291 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		0449153B25D9D6D6006C3291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0449153E25D9D6D6006C3291 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0449154025D9D6D6006C3291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0449155225D9D753006C3291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0460090025D6D87B00164CE0 /* Weather+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Extensions.swift"; sourceTree = "<group>"; };
 		0460090725D6F08A00164CE0 /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		04C4219525D6D41B006CB5DA /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
@@ -141,22 +66,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0413E82925D06E500045C485 /* Weather in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044914F525D9D562006C3291 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0449158B25D9D9BD006C3291 /* Weather in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0449152D25D9D6D6006C3291 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0449158325D9D9AA006C3291 /* Weather in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,9 +92,6 @@
 				0413E7CF25D06D4C0045C485 /* Shared */,
 				0413E7D925D06D4D0045C485 /* iOS */,
 				0413E7E025D06D4D0045C485 /* macOS */,
-				044914F925D9D562006C3291 /* tvOS */,
-				0449152825D9D6D6006C3291 /* watchOS WatchKit App */,
-				0449153425D9D6D6006C3291 /* watchOS WatchKit Extension */,
 				0413E7D825D06D4D0045C485 /* Products */,
 				0413E82725D06E500045C485 /* Frameworks */,
 			);
@@ -208,10 +114,6 @@
 			children = (
 				0413E7D725D06D4D0045C485 /* WeatherApp.app */,
 				0413E7DF25D06D4D0045C485 /* WeatherApp.app */,
-				044914F825D9D562006C3291 /* WeatherApp (tvOS).app */,
-				0449152125D9D6D6006C3291 /* WeatherApp.app */,
-				0449152425D9D6D6006C3291 /* WeatherApp watchOS WatchKit App.app */,
-				0449153025D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,52 +147,6 @@
 			children = (
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		044914F925D9D562006C3291 /* tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				0449150325D9D563006C3291 /* Info.plist */,
-				0449150025D9D563006C3291 /* Preview Content */,
-				0449155225D9D753006C3291 /* Assets.xcassets */,
-			);
-			path = tvOS;
-			sourceTree = "<group>";
-		};
-		0449150025D9D563006C3291 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0449150125D9D563006C3291 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0449152825D9D6D6006C3291 /* watchOS WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				0449152925D9D6D6006C3291 /* Assets.xcassets */,
-				0449152B25D9D6D6006C3291 /* Info.plist */,
-			);
-			path = "watchOS WatchKit App";
-			sourceTree = "<group>";
-		};
-		0449153425D9D6D6006C3291 /* watchOS WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				0449153925D9D6D6006C3291 /* ComplicationController.swift */,
-				0449153B25D9D6D6006C3291 /* Assets.xcassets */,
-				0449154025D9D6D6006C3291 /* Info.plist */,
-				0449153D25D9D6D6006C3291 /* Preview Content */,
-			);
-			path = "watchOS WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		0449153D25D9D6D6006C3291 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0449153E25D9D6D6006C3291 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		046BED4D25D2B9DF008C53F3 /* Models */ = {
@@ -353,80 +209,6 @@
 			productReference = 0413E7DF25D06D4D0045C485 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		044914F725D9D562006C3291 /* WeatherApp (tvOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0449150425D9D563006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp (tvOS)" */;
-			buildPhases = (
-				044914F425D9D562006C3291 /* Sources */,
-				044914F525D9D562006C3291 /* Frameworks */,
-				044914F625D9D562006C3291 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WeatherApp (tvOS)";
-			packageProductDependencies = (
-				0449158A25D9D9BD006C3291 /* Weather */,
-			);
-			productName = "weather-app";
-			productReference = 044914F825D9D562006C3291 /* WeatherApp (tvOS).app */;
-			productType = "com.apple.product-type.application";
-		};
-		0449152025D9D6D6006C3291 /* WeatherApp watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0449154925D9D6D6006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp watchOS" */;
-			buildPhases = (
-				0449151F25D9D6D6006C3291 /* Resources */,
-				0449154825D9D6D6006C3291 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0449152725D9D6D6006C3291 /* PBXTargetDependency */,
-			);
-			name = "WeatherApp watchOS";
-			productName = watchOS;
-			productReference = 0449152125D9D6D6006C3291 /* WeatherApp.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		0449152325D9D6D6006C3291 /* WeatherApp watchOS WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0449154525D9D6D6006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp watchOS WatchKit App" */;
-			buildPhases = (
-				0449152225D9D6D6006C3291 /* Resources */,
-				0449154425D9D6D6006C3291 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0449153325D9D6D6006C3291 /* PBXTargetDependency */,
-			);
-			name = "WeatherApp watchOS WatchKit App";
-			productName = "watchOS WatchKit App";
-			productReference = 0449152425D9D6D6006C3291 /* WeatherApp watchOS WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		0449152F25D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0449154125D9D6D6006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp watchOS WatchKit Extension" */;
-			buildPhases = (
-				0449152C25D9D6D6006C3291 /* Sources */,
-				0449152D25D9D6D6006C3291 /* Frameworks */,
-				0449152E25D9D6D6006C3291 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WeatherApp watchOS WatchKit Extension";
-			packageProductDependencies = (
-				0449158225D9D9AA006C3291 /* Weather */,
-			);
-			productName = "watchOS WatchKit Extension";
-			productReference = 0449153025D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -440,18 +222,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					0413E7DE25D06D4D0045C485 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					044914F725D9D562006C3291 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					0449152025D9D6D6006C3291 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					0449152325D9D6D6006C3291 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					0449152F25D9D6D6006C3291 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -474,10 +244,6 @@
 			targets = (
 				0413E7D625D06D4D0045C485 /* WeatherApp (iOS) */,
 				0413E7DE25D06D4D0045C485 /* WeatherApp (macOS) */,
-				044914F725D9D562006C3291 /* WeatherApp (tvOS) */,
-				0449152025D9D6D6006C3291 /* WeatherApp watchOS */,
-				0449152325D9D6D6006C3291 /* WeatherApp watchOS WatchKit App */,
-				0449152F25D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -496,39 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0413E7FE25D06D4D0045C485 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044914F625D9D562006C3291 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0449155325D9D753006C3291 /* Assets.xcassets in Resources */,
-				0449150225D9D563006C3291 /* Preview Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0449151F25D9D6D6006C3291 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0449152225D9D6D6006C3291 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0449152A25D9D6D6006C3291 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0449152E25D9D6D6006C3291 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0449153F25D9D6D6006C3291 /* Preview Assets.xcassets in Resources */,
-				0449153C25D9D6D6006C3291 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,45 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044914F425D9D562006C3291 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0449152C25D9D6D6006C3291 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0449156725D9D96B006C3291 /* Weather+Extensions.swift in Sources */,
-				0449156425D9D96B006C3291 /* RootView.swift in Sources */,
-				0449156925D9D96B006C3291 /* SourceAttribution.swift in Sources */,
-				0449155A25D9D952006C3291 /* WeatherApp.swift in Sources */,
-				0449156325D9D96B006C3291 /* WeatherDetail.swift in Sources */,
-				0449156525D9D96B006C3291 /* CurrentWeather.swift in Sources */,
-				0449153A25D9D6D6006C3291 /* ComplicationController.swift in Sources */,
-				0449156225D9D96B006C3291 /* UpcomingWeatherCell.swift in Sources */,
-				0449156125D9D96B006C3291 /* WeatherModel.swift in Sources */,
-				0449156825D9D96B006C3291 /* Preference.swift in Sources */,
-				0449156625D9D96B006C3291 /* LocationAuthorizationInformation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0449152725D9D6D6006C3291 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0449152325D9D6D6006C3291 /* WeatherApp watchOS WatchKit App */;
-			targetProxy = 0449152625D9D6D6006C3291 /* PBXContainerItemProxy */;
-		};
-		0449153325D9D6D6006C3291 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0449152F25D9D6D6006C3291 /* WeatherApp watchOS WatchKit Extension */;
-			targetProxy = 0449153225D9D6D6006C3291 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0413E7FF25D06D4D0045C485 /* Debug */ = {
@@ -826,176 +521,6 @@
 			};
 			name = Release;
 		};
-		0449150525D9D563006C3291 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"tvOS/Preview Content\"";
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = tvOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 14.3;
-			};
-			name = Debug;
-		};
-		0449150625D9D563006C3291 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"tvOS/Preview Content\"";
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = tvOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 14.3;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0449154225D9D6D6006C3291 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_ASSET_PATHS = "\"watchOS WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "watchOS WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		0449154325D9D6D6006C3291 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_ASSET_PATHS = "\"watchOS WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "watchOS WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		0449154625D9D6D6006C3291 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				IBSC_MODULE = watchOS_WatchKit_Extension;
-				INFOPLIST_FILE = "watchOS WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		0449154725D9D6D6006C3291 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				IBSC_MODULE = watchOS_WatchKit_Extension;
-				INFOPLIST_FILE = "watchOS WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		0449154A25D9D6D6006C3291 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
-				PRODUCT_NAME = WeatherApp;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		0449154B25D9D6D6006C3291 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = N685EHW3EW;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "se.devmaximilian.weather-app";
-				PRODUCT_NAME = WeatherApp;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1026,42 +551,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0449150425D9D563006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp (tvOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0449150525D9D563006C3291 /* Debug */,
-				0449150625D9D563006C3291 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0449154125D9D6D6006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp watchOS WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0449154225D9D6D6006C3291 /* Debug */,
-				0449154325D9D6D6006C3291 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0449154525D9D6D6006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp watchOS WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0449154625D9D6D6006C3291 /* Debug */,
-				0449154725D9D6D6006C3291 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0449154925D9D6D6006C3291 /* Build configuration list for PBXNativeTarget "WeatherApp watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0449154A25D9D6D6006C3291 /* Debug */,
-				0449154B25D9D6D6006C3291 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1082,16 +571,6 @@
 			productName = Weather;
 		};
 		0413E82825D06E500045C485 /* Weather */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0413E81825D06DB00045C485 /* XCRemoteSwiftPackageReference "Weather" */;
-			productName = Weather;
-		};
-		0449158225D9D9AA006C3291 /* Weather */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0413E81825D06DB00045C485 /* XCRemoteSwiftPackageReference "Weather" */;
-			productName = Weather;
-		};
-		0449158A25D9D9BD006C3291 /* Weather */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0413E81825D06DB00045C485 /* XCRemoteSwiftPackageReference "Weather" */;
 			productName = Weather;
