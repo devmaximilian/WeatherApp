@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Temperature: View {
+struct CurrentConditions: View {
     let titleFont: Font = {
         let font = UIFont.systemFont(ofSize: 108.0, weight: .thin)
         let fontMetrics = UIFontMetrics(forTextStyle: .largeTitle)
@@ -40,8 +40,8 @@ struct Temperature: View {
     }
 }
 
-struct Temperature_Previews: PreviewProvider {
+struct CurrentConditions_Preview: PreviewProvider {
     static var previews: some View {
-        Temperature()
+        CurrentConditions()
     }
 }
