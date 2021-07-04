@@ -8,5 +8,15 @@
 import Foundation
 
 struct Weather {
-    let temperature: Double
+    
+    // MARK: - Condition
+    
+    enum Condition {
+        case sunny
+    }
+    
+    // MARK: - Properties
+    
+    let temperature: Int
+    let condition: Condition
 }
