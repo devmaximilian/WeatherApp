@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Weather {
+struct Weather: Identifiable {
     
     // MARK: - Condition
     
@@ -17,6 +17,23 @@ struct Weather {
     
     // MARK: - Properties
     
+    let id: UUID = .init()
     let temperature: Int
     let condition: Condition
+}
+
+// MARK: Time
+
+extension Weather {
+    var timeString: String {
+        return "Now"
+    }
+}
+
+// MARK: Condition symbol
+
+extension Weather {
+    var conditionSymbol: String {
+        return "cloud.drizzle.fill"
+    }
 }
