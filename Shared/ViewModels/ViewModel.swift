@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
 
     enum State {
         case loading
-        case loaded(Weather)
+        case loaded(WeatherForecast)
         case error(Error)
     }
     

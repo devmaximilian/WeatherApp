@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Weather: Identifiable {
+struct WeatherForecast: Identifiable {
     
     // MARK: - Condition
     
@@ -24,7 +24,7 @@ struct Weather: Identifiable {
 
 // MARK: Time
 
-extension Weather {
+extension WeatherForecast {
     var timeString: String {
         return "Now"
     }
@@ -32,7 +32,7 @@ extension Weather {
 
 // MARK: Condition symbol
 
-extension Weather {
+extension WeatherForecast {
     var conditionSymbol: String {
         return "cloud.drizzle.fill"
     }

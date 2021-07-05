@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ForecastToday: View {
-    @State var forecasts: [Weather]
+    @State var forecasts: [WeatherForecast]
     
     var body: some View {
         HStack {
@@ -18,7 +18,7 @@ struct ForecastToday: View {
         }
     }
     
-    private func forecastRow(_ forecast: Weather) -> some View {
+    private func forecastRow(_ forecast: WeatherForecast) -> some View {
         VStack {
             Text(forecast.timeString)
                 .font(.subheadline)
@@ -40,9 +40,9 @@ struct ForecastToday: View {
 struct ForecastToday_Previews: PreviewProvider {
     static var previews: some View {
         ForecastToday(forecasts: [
-            Weather(temperature: 25, condition: .sunny),
-            Weather(temperature: 26, condition: .sunny),
-            Weather(temperature: 27, condition: .sunny)
+            WeatherForecast(temperature: 25, condition: .sunny),
+            WeatherForecast(temperature: 26, condition: .sunny),
+            WeatherForecast(temperature: 27, condition: .sunny)
         ])
     }
 }

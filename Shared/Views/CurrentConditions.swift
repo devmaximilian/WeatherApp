@@ -30,7 +30,6 @@ struct CurrentConditions: View {
                 Text("26°")
                     .font(titleFont)
                     .offset(x: 15, y: 0)
-                    
             }
             .frame(
                 maxWidth: .infinity,
